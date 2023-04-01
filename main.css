@@ -1,0 +1,241 @@
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*Colors*/
+  --white: #fff;
+  --background: #e8ecf3;
+  --purple: #7e6cca;
+  --dark-blue: #0c1226;
+  --beige: #eeedf0;
+  --gray: #a1b5c1;
+  --pink: #f9aca7;
+  --maron: #68747d;
+  --red: #cf365f;
+
+  /*Fonts*/
+  --font: "Poppins", sans-serif;
+
+  /*Font size*/
+  --fs-1: 4.8rem;
+  --fs-2: 3.6rem;
+  --fs-3: 3rem;
+  --fs-4: 2.4rem;
+  --fs-12: 2.2rem;
+  --fs-5: 1.8rem;
+  --fs-6: 1.6rem;
+  --fs-7: 1.4rem;
+  --fs-8: 1.2rem;
+  --fs-9: 1rem;
+  --fs-10: 1.1rem;
+  --fs-11: 0.9rem;
+
+  /*Font weight*/
+  --fw-100: 100;
+  --fw-200: 200;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
+
+  /*Border radius*/
+  --radius-10: 1rem;
+  --radius-8: 0.8rem;
+  --radius-5: 0.5rem;
+  --radius-3: 0.3rem;
+  --radius-15: 1.5rem;
+  --radius-circle: 50%;
+  --radius-semi-circle: 100px;
+
+  --width: 10px;
+  --height: 10px;
+  /*Line height*/
+  --lh: 1.7;
+}
+
+html {
+  font-family: var(--font);
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+  background: transparent;
+}
+button svg {
+  stroke: var(--gray-ligher);
+  cursor: pointer;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background: var(--background);
+}
+
+.container {
+  max-width: 1050px;
+  width: 90%;
+  margin-block: 50px;
+}
+.color_pallet {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 50px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: var(--radius-semi-circle);
+}
+
+.btn-black {
+  background: var(--dark-blue);
+  color: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-white {
+  background-color: var(--white);
+  color: var(--dark-blue);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+.btn-generator {
+  background: var(--purple);
+  color: var(--white);
+  padding: 15px 30px;
+  align-self: center;
+  border-radius: var(--radius-3);
+  box-shadow: 0px 5px 20px rgba(126, 108, 202, 0.2);
+}
+.btn-generator {
+  font-size: var(--fs-8);
+  font-weight: var(--fw-200);
+}
+.btn {
+  font-size: var(--fs-9);
+  font-weight: var(--fw-100);
+}
+.btn,
+.title {
+  align-self: center;
+}
+.title {
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+}
+.colors {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.color-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--white);
+  border-radius: var(--radius-10);
+  padding: 10px;
+}
+
+.action-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.action-text {
+  text-align: center;
+}
+.color {
+  background: gray;
+  width: 100%;
+  height: 230px;
+  border-radius: var(--radius-10);
+}
+.color-text {
+  text-align: center;
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  color: var(--dark-blue);
+}
+
+.color-box:nth-child(1) .color {
+  background: var(--beige);
+}
+.color-box:nth-child(2) .color {
+  background: var(--gray);
+}
+.color-box:nth-child(3) .color {
+  background: var(--pink);
+}
+.color-box:nth-child(4) .color {
+  background: var(--maron);
+}
+.color-box:nth-child(5) .color {
+  background: var(--red);
+}
+
+@media screen and (min-width: 280px) {
+  .btn-generator {
+    padding: 10px 80px;
+  }
+}
+@media screen and (min-width: 430px) {
+  .colors {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .btn,
+  .btn-generator {
+    font-size: var(--fs-7);
+  }
+  .btn-generator {
+    padding: 10px 80px;
+  }
+}
+
+@media screen and (min-width: 630px) {
+  .colors {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .btn {
+    font-size: var(--fs-7);
+  }
+  .btn-generator {
+    font-size: var(--fs-7);
+    padding: 15px 100px;
+  }
+  .action-text {
+    font-size: var(--fs-8);
+  }
+  .title {
+    font-size: var(--fs-4);
+    font-weight: var(--fw-600);
+  }
+}
+
+@media screen and (min-width: 830px) {
+  .colors {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (min-width: 1030px) {
+  .colors {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
